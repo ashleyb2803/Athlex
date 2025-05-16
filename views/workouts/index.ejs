@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs') %>
+
+<h1><%= title %></h1>
+
+<% if (workouts.length) { %>
+  <ul>
+    <% workouts.forEach((workout) => { %>
+      <li>
+        <a href="/workouts/<%= workout._id %>">
+          <%= workout.name %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>There Are No Workouts Yet</p>
+<% } %>
+
+<%- include('../partials/footer.ejs') %>

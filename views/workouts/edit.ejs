@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs') %>
+ 
+ 
+ <h1>Edit Workout</h1>
+
+
+
+    <form action="/workouts" method="POST">
+        <label for="name">Workout Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="reps">Reps:</label>
+        <input type="number" name="exercises[][reps]" required>
+
+        <label for="weight">Weight:</label>
+        <input type="number" name="exercises[][weight][value]" required>
+        <select name="exercises[][weight][unit]">
+        <option value="lbs">lbs</option>
+        <option value="kg">kg</option>
+        </select>
+        </div>
+        </div>
+
+        <button type="button" id="add-workout">Add Workout</button>
+        <br><br>
+        <button type="submit">Save Workout</button>
+    </form>
+
+
+
+  <button type="submit">➕ Workout</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

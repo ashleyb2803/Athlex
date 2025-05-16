@@ -8,11 +8,12 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  background-color: black;
 }
 
 nav,
 footer {
-  background-color: lightblue;
+  background-color: rgb(34, 140, 240);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +46,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 5vmin;
+  color: white;
 }
 
 form {
@@ -62,7 +64,7 @@ form * {
 input,
 textarea,
 select {
-  border: 0.3vmin solid black;
+  border: 0.3vmin solid rgb(0, 0, 0);
 }
 
 form button[type='submit'] {

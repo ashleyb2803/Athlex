@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>New Workout</h1>
+
+<h1><%= workout.name %></h1>
+
+    <h2>Exercises</h2>
+    <ul>
+        <% workout.exercises.forEach(exercise => { %>
+            <li>
+                <strong><%= exercise.exerciseName %></strong> - 
+                <%= exercise.reps %> reps @ <%= exercise.weight.value %> <%= exercise.weight.unit %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <p>Created on: <%= workout.createdAt.toDateString() %></p>
+
+    <a href="/workouts">Back to Workouts</a> |
+    <a href="/workouts/<%= workout._id %>/edit">Edit</a> |
+    <form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST" style="display: inline;">
+        <button type="submit">Delete Workout</button>
+    </form>
