@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
 // GET /unicorns/new
 // Example of a protected route
 router.get('/new', ensureLoggedIn, (req, res) => {
-  res.send('Create a unicorn!');
+  res.send('Create a workout!');
 });
 
 module.exports = router;
