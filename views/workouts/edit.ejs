@@ -5,7 +5,7 @@
 
 
 
-    <form action="/workouts" method="POST">
+     <form action="/workouts/<%= workout._id %>?_method=PUT" method="POST">
         <label for="name">Workout Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -24,14 +24,9 @@
         </div>
         </div>
 
-        <button type="button" id="add-workout">Add Workout</button>
-        <br><br>
+        
         <button type="submit">Save Workout</button>
     </form>
 
-
-
-  <button type="submit">➕ Workout</button>
-</form>
 
 <%- include('../partials/footer.ejs') %>

@@ -8,7 +8,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: black;
+  background-color: rgb(243, 239, 239);
 }
 
 nav,
@@ -19,7 +19,7 @@ footer {
   align-items: center;
   padding: 2vmin;
   font-size: 2vh;
-  color: lightslategray;
+  color: rgb(1, 5, 10);
 }
 
 nav a {
@@ -38,7 +38,7 @@ nav a {
 
 nav span {
   font-size: 1.5vmin;
-  color: lightslategray;
+  color: rgb(0, 0, 1);
 }
 
 main {
@@ -46,7 +46,7 @@ main {
   flex-direction: column;
   align-items: center;
   margin-top: 5vmin;
-  color: white;
+  color: rgb(1, 1, 1);
 }
 
 form {
@@ -78,4 +78,39 @@ button:hover {
 
 .error-msg {
   color: rgb(223, 116, 116);
+}
+
+
+
+main ul {
+  margin: 3vmin auto;
+  padding: 2vmin 4vmin;
+  background: #222;
+  border-radius: 1.5vmin;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  list-style: none;
+}
+
+
+main ul li {
+  margin-bottom: 1.5vmin;
+  padding: 1vmin;
+  border-bottom: 1px solid #189bff;
+}
+
+main ul {
+  margin: 3vmin auto;
+  padding: 2vmin 4vmin;
+  background: #189bff; /* Changed background color */
+  border-radius: 1.5vmin;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  list-style: none;
+}
+
+main ul li:last-child {
+  border-bottom: none;
 }

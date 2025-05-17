@@ -40,7 +40,7 @@ router.post('/', ensureLoggedIn, async (req, res) => {
   try {
     // Be sure to add the owner's/user's ObjectId (_id)
     req.body.owner = req.user._id;
-    await Listing.create(req.body);
+    await Workout.create(req.body);
     res.redirect('/workouts');
   } catch (err) {
     console.log(err);
@@ -51,9 +51,14 @@ router.post('/', ensureLoggedIn, async (req, res) => {
 
 // show route/action
 // GET /workouts/:id
-router.get('/:id', (req, res) => {
-  const app = req.user.applications.id(req.params.id);
-  res.render('workouts/show.ejs', { app });
+router.get('/:id', async (req, res) => {
+  try {
+    const workout = await Workout.findById(req.params.id);
+    res.render('workouts/show.ejs', { workout });
+  } catch (err) {
+    console.log(err);
+    res.redirect('/workouts');
+  }
 });
 
 
@@ -90,7 +95,7 @@ router.put('/:id', async (req, res) => {
     res.redirect('/workouts');
   } catch (err) {
     console.log(err);
-    res.redirect('/workouts');
+    res.redirect('Update failed');
   }
 });
 
