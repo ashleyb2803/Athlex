@@ -114,3 +114,35 @@ main ul {
 main ul li:last-child {
   border-bottom: none;
 }
+
+
+.edit-btn {
+  background-color: #ffd966; /* yellow-ish for edit */
+  color: #222;
+  border: none;
+  padding: 0.7vmin 2vmin;
+  border-radius: 1vmin;
+  cursor: pointer;
+  font-size: 2vmin;
+  margin-left: 1vmin;
+  transition: background 0.2s, color 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #ffe599;
+  color: #189bff;
+}
+
+
+
+
+
+
+
+.about-me {
+  max-width: 600px;
+  margin: 2vmin auto;
+  font-size: 2.2vmin;
+  color: #333;
+  text-align: center;
+}
