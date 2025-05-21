@@ -4,21 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
-  <title>Athlex</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+ 
+ 
+  <title> Athlex </title>
 </head>
 <body>
   <nav>
-    <a href="/">🏠</a>
+     <a href="/" style="font-size:2rem; color:inherit;">
+    <i class="bi bi-house"></i>
+  </a>
     <div>
       <a href="/workouts">ALL WORKOUTS</a>
       <% if (user) { %>
         <a href="/workouts/new">ADD WORKOUTS</a>
         <a href="/auth/sign-out">SIGN OUT</a>
-        <span><%= user.name %></span>
+        <span>
+        <i class="bi bi-person-circle" style="margin-right: 0.5em; font-size:2rem; vertical-align:middle;"></i>
+        <%= user.name %>
+        </span>
       <% } else { %>
         <a href="/auth/sign-up">SIGN UP</a>
         <a href="/auth/sign-in">SIGN IN</a>
       <% } %>
     </div>
   </nav>
+  </body>
   <main>
+  
+ 

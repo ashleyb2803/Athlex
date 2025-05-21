@@ -1,8 +1,8 @@
 <%- include('../partials/header.ejs') %>
 
-<h1><%= workout.name %></h1>
+<h1 class="workout-name"><%= workout.name %></h1>
 
-<h2>Exercises</h2>
+
 <ul>
     <% if (workout.exercises && workout.exercises.length > 0) { %>
         <% workout.exercises.forEach(exercise => { %>
@@ -11,15 +11,13 @@
                 <%= exercise.reps %> reps @ <%= exercise.weight.value %> <%= exercise.weight.unit %>
             </li>
         <% }); %>
-    <% } else { %>
-        <li>No exercises added yet.</li>
     <% } %>
 </ul>
 
 <p>Created on: <%= workout.createdAt ? workout.createdAt.toDateString() : 'Unknown' %></p>
 
-<a href="/workouts">Back to Workouts</a> |
-<a href="/workouts/<%= workout._id %>/edit">Edit</a> |
+<a href="/workouts" class="btn">Back to Workouts</a>
+<a href="/workouts/<%= workout._id %>/edit" class="btn">Edit</a>
 <form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST" style="display: inline;">
-    <button type="submit">Delete Workout</button>
+    <button type="submit" class="btn">Delete Workout</button>
 </form>

@@ -3,17 +3,22 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+
+
 body {
   margin: 0;
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: rgb(243, 239, 239);
+  
 }
 
 nav,
 footer {
-  background-color: rgb(34, 140, 240);
+  background-color: rgb(72, 70, 71);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -97,13 +102,13 @@ main ul {
 main ul li {
   margin-bottom: 1.5vmin;
   padding: 1vmin;
-  border-bottom: 1px solid #189bff;
+  border-bottom: 1px solid #030303;
 }
 
 main ul {
   margin: 3vmin auto;
   padding: 2vmin 4vmin;
-  background: #189bff; /* Changed background color */
+  background: #545555; /* Changed background color */
   border-radius: 1.5vmin;
   max-width: 600px;
   width: 100%;
@@ -115,10 +120,33 @@ main ul li:last-child {
   border-bottom: none;
 }
 
+.workout-name {
+  color: #c90704; 
+}
+
+
+.add-workout-title {
+  color: #c90704; 
+}
+
+.workout-label {
+  color: #c90704; 
+}
+.date-label {
+  color: #c90704; 
+}
+.reps-label {
+  color: #c90704; 
+}
+.weight-label {
+  color: #c90704; 
+}
+
+
 
 .edit-btn {
   background-color: #ffd966; /* yellow-ish for edit */
-  color: #222;
+  color: #171616;
   border: none;
   padding: 0.7vmin 2vmin;
   border-radius: 1vmin;
@@ -130,19 +158,40 @@ main ul li:last-child {
 
 .edit-btn:hover {
   background-color: #ffe599;
-  color: #189bff;
+  color: #696a6a;
 }
-
-
-
-
-
 
 
 .about-me {
   max-width: 600px;
   margin: 2vmin auto;
   font-size: 2.2vmin;
-  color: #333;
+  color: #f8f5f5;
   text-align: center;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px 2px;
+  background-color: #494949;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background-color: #525354;
+}
+
+
+body {
+  background-image: url('/images/background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
