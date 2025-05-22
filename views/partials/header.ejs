@@ -6,36 +6,31 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
- 
-
- 
- 
   <title> Athlex </title>
 </head>
 <body>
   <nav>
-     <a href="/" style="font-size:2rem; color:inherit;">
-    <i class="bi bi-house"></i>
+  <a href="/" style="font-size:2rem; color:inherit;">
+  <i class="bi bi-house"></i>
   </a>
-    <div>
-      <a href="/workouts">ALL WORKOUTS</a>
-      <% if (user) { %>
-        <a href="/workouts/new">ADD WORKOUTS</a>
-        <a href="/auth/sign-out">SIGN OUT</a>
-        <span>
-            <img
-    src="https://api.dicebear.com/9.x/bottts/svg?seed=<%= encodeURIComponent(user.name) %>"
-    alt="avatar"
-    style="height:2rem; width:2rem; border-radius:50%; vertical-align:middle; margin-right:0.5em;"
-  />
+  <div>
+  <a href="/workouts">ALL WORKOUTS</a>
+  <% if (user) { %>
+  <a href="/workouts/new">ADD WORKOUTS</a>
+  <a href="/auth/sign-out">SIGN OUT</a>
+  <span>
+  <img
+  src="https://api.dicebear.com/9.x/bottts/svg?seed=<%= encodeURIComponent(user.name) %>"
+  alt="avatar"
+  style="height:2rem; width:2rem; border-radius:50%; vertical-align:middle; margin-right:0.5em;"/>
       
-        <%= user.name %>
-        </span>
-      <% } else { %>
-        <a href="/auth/sign-up">SIGN UP</a>
-        <a href="/auth/sign-in">SIGN IN</a>
-      <% } %>
-    </div>
+  <%= user.name %>
+  </span>
+  <% } else { %>
+  <a href="/auth/sign-up">SIGN UP</a>
+  <a href="/auth/sign-in">SIGN IN</a>
+  <% } %>
+  </div>
   </nav>
   </body>
   <main>
