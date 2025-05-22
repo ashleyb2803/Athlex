@@ -241,3 +241,46 @@ body {
   max-width: 400px;
   width: 100%;
 }
+
+
+@media (max-width: 600px) {
+
+  body {
+    grid-template-rows: auto 1fr auto;
+    padding: 0;
+  }
+
+  nav, footer {
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 1vmin;
+  }
+
+  main {
+    margin-top: 2vmin;
+    padding: 0 1em;
+  }
+
+  .about-me, .workout-details-box, main ul {
+    max-width: 98vw;
+    padding: 1em;
+    font-size: 1rem;
+  }
+
+   .btn {
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 0.5em 0;
+    padding: 1em 0;           
+    box-sizing: border-box;   
+    display: block;           
+    text-align: center;
+  }
+
+  .exercise-card {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+    gap: 0.5em;
+  }
+}

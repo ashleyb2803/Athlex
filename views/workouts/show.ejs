@@ -7,8 +7,10 @@
   <p class="workout-created">Created on: <%= workout.createdAt ? workout.createdAt.toDateString() : 'Unknown' %></p>
 </div>
 
-<a href="/workouts" class="btn">Back to Workouts</a>
-<a href="/workouts/<%= workout._id %>/edit" class="btn">Edit</a>
-<form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST" style="display: inline;">
+<div class="button-group">
+  <a href="/workouts" class="btn">Back to Workouts</a>
+  <a href="/workouts/<%= workout._id %>/edit" class="btn">Edit</a>
+  <form action="/workouts/<%= workout._id %>?_method=DELETE" method="POST" style="display: inline;">
     <button type="submit" class="btn">Delete Workout</button>
-</form>
+  </form>
+</div>
