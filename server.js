@@ -9,6 +9,7 @@ const methodOverride = require("method-override");
 const morgan = require("morgan");
 const session = require('express-session');
 
+
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT || 3000;
 
@@ -52,6 +53,7 @@ app.use(require('./middleware/add-user-to-req-and-locals'));
 app.get('/', (req, res) => {
   res.render('home.ejs');
 });
+
 
 
 app.use('/auth', require('./controllers/auth'));

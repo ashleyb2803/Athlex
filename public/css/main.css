@@ -121,25 +121,25 @@ main ul li:last-child {
 }
 
 .workout-name {
-  color: #c90704; 
+  color: #fdfdfd; 
 }
 
 
 .add-workout-title {
-  color: #c90704; 
+  color: #ffffff; 
 }
 
 .workout-label {
-  color: #c90704; 
+  color: #ffffff; 
 }
 .date-label {
-  color: #c90704; 
+  color: #fcfcfc; 
 }
 .reps-label {
-  color: #c90704; 
+  color: #ffffff; 
 }
 .weight-label {
-  color: #c90704; 
+  color: #ffffff; 
 }
 
 
@@ -190,8 +190,22 @@ main ul li:last-child {
 
 
 body {
-  background-image: url('/images/background2.jpg');
+  background-image: url('/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+
+.exercise-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1.5vmin;
+  padding: 1.5vmin 2vmin;
+  font-size: 1.1rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
