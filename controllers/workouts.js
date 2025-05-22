@@ -7,25 +7,15 @@ const Workout = require('../models/workout');
 // Middleware used to protect routes that need a logged in user
 const ensureLoggedIn = require('../middleware/ensure-logged-in');
 
-// This is how we can more easily protect ALL routes for this router
-// router.use(ensureLoggedIn);
-
-// ALL paths start with '/workouts'
-
-// index action
-// GET /workouts
-// Example of a non-protected route
 
 
 // index action
 // GET /workouts
 // Non-protected route
-router.get('/', async (req, res) => {
-  // Thanks to the timestamps option, we can sort by createdAt
-  const workouts = await Workout.find({}).sort('-createdAt');
-  res.render('workouts/index.ejs', { workouts, title: 'All Workouts' });
+router.get('/', ensureLoggedIn, async (req, res) => {
+  const workouts = await Workout.find({ owner: req.user._id }).sort('-createdAt');
+  res.render('workouts/index.ejs', { workouts, title: 'My Workouts' });
 });
-
 
 // GET /workouts/new
 
@@ -38,8 +28,7 @@ router.get('/new', ensureLoggedIn, (req, res) => {
 // POST /workouts
 router.post('/', ensureLoggedIn, async (req, res) => {
   try {
-    // Be sure to add the owner's/user's ObjectId (_id)
-    req.body.owner = req.user._id;
+    req.body.owner = req.user._id; // Set the owner to the logged-in user
     await Workout.create(req.body);
     res.redirect('/workouts');
   } catch (err) {
@@ -51,7 +40,7 @@ router.post('/', ensureLoggedIn, async (req, res) => {
 
 // show route/action
 // GET /workouts/:id
-router.get('/:id', async (req, res) => {
+router.get('/:id', ensureLoggedIn, async (req, res) => {
   try {
     const workout = await Workout.findById(req.params.id);
     res.render('workouts/show.ejs', { workout });
@@ -65,7 +54,7 @@ router.get('/:id', async (req, res) => {
 
 // delete route/action
 // DELETE /applications/:id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', ensureLoggedIn, async (req, res) => {
   try {
     await Workout.findByIdAndDelete(req.params.id);
     res.redirect('/workouts');
@@ -77,7 +66,7 @@ router.delete('/:id', async (req, res) => {
 
 // edit route/action
 // GET /workouts/:id/edit
-router.get('/:id/edit', async (req, res) => {
+router.get('/:id/edit', ensureLoggedIn, async (req, res) => {
   try {
     const workout = await Workout.findById(req.params.id);
     res.render('workouts/edit.ejs', { workout });
@@ -89,7 +78,7 @@ router.get('/:id/edit', async (req, res) => {
 
 // update route/action
 // PUT /workouts/:id
-router.put('/:id', async (req, res) => {
+router.put('/:id', ensureLoggedIn, async (req, res) => {
   try {
     await Workout.findByIdAndUpdate(req.params.id, req.body);
     res.redirect('/workouts');

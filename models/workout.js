@@ -6,7 +6,8 @@ const workoutSchema = new Schema({
   name: {
     type: String,
     required: true,
-
+  },
+    
     weight: {
       type: Number,
       required: true
@@ -16,15 +17,16 @@ const workoutSchema = new Schema({
       required: true
     },
 
-    createdAt: {
-        type: Date,
-        default: Date.now
-    }
-
+   date: {
+    type: Date,
+    required: true
+   },
     
-  }},
+   owner: { type: Schema.Types.ObjectId, 
+    ref: 'User', 
+    required: true },
 
-
+  },
 
 
   { timestamps: true});

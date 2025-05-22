@@ -13,18 +13,17 @@
     <input type="date" id="date" name="date" required>
 
     <label for="reps" class="reps-label">Reps:</label>
-    <input type="number" name="exercises[][reps]" required>
+    <input type="number" name="reps" required>
 
     <label for="weight" class="weight-label">Weight:</label>
-    <input type="number" name="exercises[][weight][value]" required>
+    <input type="number" name="weight" required>
     <select name="exercises[][weight][unit]">
       <option value="lbs">lbs</option>
       <option value="kg">kg</option>
     </select>
 
     <button type="submit" id="add-workout">Add Workout</button>
-    <br><br>
-    <button type="submit">Save Workout</button>
+ 
 </form>
  
 

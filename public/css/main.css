@@ -209,3 +209,35 @@ body {
   align-items: center;
   gap: 1em;
 }
+
+
+.workout-reps {
+  color: #f8fbf8;         /* Green */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.workout-weight {
+  color: #fafafa;         /* Blue */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.workout-created {
+  color: #888;            /* Gray */
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+.workout-details-box {
+  background: rgba(84, 84, 84, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 1.5em 2em;
+  margin: 2em 0;
+  max-width: 400px;
+  width: 100%;
+}

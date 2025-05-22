@@ -1,20 +1,11 @@
 <%- include('../partials/header.ejs') %>
 
 <h1 class="workout-name"><%= workout.name %></h1>
-
-
-<ul>
-    <% if (workout.exercises && workout.exercises.length > 0) { %>
-        <% workout.exercises.forEach(exercise => { %>
-            <li>
-                <strong><%= exercise.exerciseName %></strong> - 
-                <%= exercise.reps %> reps @ <%= exercise.weight.value %> <%= exercise.weight.unit %>
-            </li>
-        <% }); %>
-    <% } %>
-</ul>
-
-<p>Created on: <%= workout.createdAt ? workout.createdAt.toDateString() : 'Unknown' %></p>
+<div class="workout-details-box">
+  <p class="workout-reps">Reps: <%= workout.reps %></p>
+  <p class="workout-weight">Weight: <%= workout.weight %></p>
+  <p class="workout-created">Created on: <%= workout.createdAt ? workout.createdAt.toDateString() : 'Unknown' %></p>
+</div>
 
 <a href="/workouts" class="btn">Back to Workouts</a>
 <a href="/workouts/<%= workout._id %>/edit" class="btn">Edit</a>
