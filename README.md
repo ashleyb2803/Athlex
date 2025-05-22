@@ -3,9 +3,9 @@
 
 
 
-
 # Welcome to Athlex 🦾
 Athlex is a fitness tracking web application that allows users to log, edit, and review their workouts. Built with Node.js, Express, MongoDB, and EJS, Athlex helps users stay motivated and reach their fitness goals.
+
 [Click to visit Athlex](https://athlexs-a931aa1fe713.herokuapp.com/)
 
 
@@ -17,8 +17,6 @@ Athlex is a fitness tracking web application that allows users to log, edit, and
 **Home Page** <img src="public/images/Home.png" alt="screenshot">
 **Add Workout** <img src="public/images/Add.png" alt="screenshot">
 **Workout Description** <img src="public/images/Workout.png" alt="screenshot">
-
-
 
 
 
@@ -44,3 +42,9 @@ Athlex is a fitness tracking web application that allows users to log, edit, and
 ## Customization
 
 - **Avatars:** User avatars are generated using DiceBear and are unique per user.
+
+## IceBox Features 🧊
+
+- Implement a timer for cardio workout
+- Add a gps feature to log miles for runs/walks
+- Suggested Workout playlist 
